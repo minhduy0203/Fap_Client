@@ -1,0 +1,18 @@
+{
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "library": "tailwindcss@2.2.19",
+      "destination": "wwwroot/lib/tailwindcss/",
+      "files": [
+        "tailwind.min.css",
+        "components.min.css",
+        "base.min.css",
+        "tailwind-dark.min.css",
+        "tailwind-experimental.min.css",
+        "utilities.min.css"
+      ]
+    }
+  ]
+}

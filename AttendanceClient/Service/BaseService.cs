@@ -10,7 +10,7 @@ using Microsoft.Extensions.Configuration;
 
 namespace AttendanceClient.Service
 {
-    internal class BaseService
+    public class BaseService
     {
         private string? _rootUrl;
         public BaseService() 
@@ -41,6 +41,22 @@ namespace AttendanceClient.Service
             HttpContent content = new StringContent(jsonStr, Encoding.UTF8, "application/json");
             HttpResponseMessage responseMessage = await client.PostAsync(url, content);
             return responseMessage.StatusCode;
+        }
+
+        //T = Response, E = Request type
+        public async Task<T> PostData<T,E>(string url, E value, string? accepttype = null)
+        {
+            T? result = default(T);
+            HttpClient client = new HttpClient();
+            url = _rootUrl + url;
+            HttpResponseMessage responseMessage = await client.PostAsJsonAsync(url,value);
+            if (responseMessage.StatusCode == System.Net.HttpStatusCode.OK)
+            {
+                if (responseMessage.Content is not null)
+                    result = responseMessage.Content.ReadFromJsonAsync<T>().Result;
+                return result;
+            }
+            else throw new Exception(responseMessage.StatusCode.ToString());
         }
     }
 }

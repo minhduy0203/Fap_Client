@@ -1,8 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "jH7UpUvmidA=",
+  "dgSpecHash": "XpNoHXfs3K0=",
   "success": true,
   "projectFilePath": "E:\\DEV\\Work\\AttendanceClient\\AttendanceClient\\AttendanceClient.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\HP\\.nuget\\packages\\microsoft.identitymodel.abstractions\\7.6.0\\microsoft.identitymodel.abstractions.7.6.0.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\7.6.0\\microsoft.identitymodel.jsonwebtokens.7.6.0.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\microsoft.identitymodel.logging\\7.6.0\\microsoft.identitymodel.logging.7.6.0.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\microsoft.identitymodel.tokens\\7.6.0\\microsoft.identitymodel.tokens.7.6.0.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\system.identitymodel.tokens.jwt\\7.6.0\\system.identitymodel.tokens.jwt.7.6.0.nupkg.sha512"
+  ],
   "logs": []
 }

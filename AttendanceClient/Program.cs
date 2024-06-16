@@ -1,3 +1,6 @@
+using AttendanceClient.Service;
+using Microsoft.AspNetCore.Authentication.Cookies;
+
 namespace AttendanceClient
 {
     public class Program
@@ -8,6 +11,9 @@ namespace AttendanceClient
 
             // Add services to the container.
             builder.Services.AddRazorPages();
+            builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie();
+            builder.Services.AddTransient<UserService>();
+            builder.Services.AddTransient<ScheduleService>();
 
             var app = builder.Build();
 
@@ -20,7 +26,9 @@ namespace AttendanceClient
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
+
 
             app.MapRazorPages();
 
