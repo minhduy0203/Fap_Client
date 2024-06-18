@@ -1,12 +1,13 @@
 ﻿@page
 @model AttendanceClient.Pages.Schedule.IndexModel
+@using AttendanceClient.Dto.Schedule
 @{
 }
 
 
 <form method="post">
 	Year:
-	<select name="year">
+	<select asp-for="year">
 
 		@foreach (int i in Model.scheduleYear)
 		{
@@ -16,7 +17,7 @@
 		}
 	</select>
 	Week:
-	<select name="week">
+	<select asp-for="week">
 
 		@for (int i = 1; i <= 52; i++)
 		{
@@ -33,6 +34,7 @@
 			<tr>
 				<th scope="col" class="px-6 py-3">Slot</th>
 				<th scope="col" class="px-6 py-3">Monday</th>
+				<th scope="col" class="px-6 py-3">Tuesday</th>
 				<th scope="col" class="px-6 py-3">Wednesday</th>
 				<th scope="col" class="px-6 py-3">Thursday</th>
 				<th scope="col" class="px-6 py-3">Friday</th>
@@ -44,16 +46,71 @@
 		</thead>
 
 		<tbody>
+			@* //A *@
 			@for (int i = 1; i <= 4; i++)
 			{
 				<tr>
 					<td>Slot @i</td>
-					@for (int j = 0; i <= 6; i++)
+					@for (int j = 1; j <= 7; j++)
 					{
-						<td>A</td>
+						<td>
+							@foreach (ScheduleDTO schedule in Model.Schedules)
+							{
+								@if ((int)schedule.Date.DayOfWeek == j)
+								{
+									@if (schedule.Slot == i)
+									{
+										<div>
+											@schedule.Course.Name - @schedule.Course.Code at @schedule.Room.Name
+											<br />
+											@if (User.IsInRole("STUDENT"))
+											{
+												<span class="text-blue-700">
+													@if ((int)schedule.StudentSchedules.ElementAt(0).Status == 1)
+													{
+														<div class="h-2.5 w-2.5 rounded-full bg-red-500 me-2"></div>
+														<span class="text-red-500">
+															@schedule.StudentSchedules.ElementAt(0).Status.ToString()
+														</span>
+													}
+													else if ((int)schedule.StudentSchedules.ElementAt(0).Status == 2)
+													{
+														<div class="h-2.5 w-2.5 rounded-full bg-green-500 me-2"></div>
+														<span class="text-green-500">
+															@schedule.StudentSchedules.ElementAt(0).Status.ToString()
+														</span>
+													}
+													else
+													{
+														<div class="h-2.5 w-2.5 rounded-full bg-blue-500 me-2"></div>
+														<span class="text-blue-500">
+															@schedule.StudentSchedules.ElementAt(0).Status.ToString()
+														</span>
+													}
+												
+												</span>
+											}
+											else if (User.IsInRole("TEACHER"))
+											{
+												<a asp-page="/Attendance/Index" asp-route-scheduleId="@schedule.Id">Check attendance</a>
+											}
+
+										</div>
+									}
+
+								}
+
+
+							}
+						</td>
 					}
+
+
 				</tr>
 			}
+
+			@* //P *@
+
 
 
 		</tbody>

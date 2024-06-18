@@ -14,7 +14,7 @@ namespace AttendanceClient.Service
 
 		public async Task<List<ScheduleDTO>> GetTeacherSchedule(int week, int year, int tid)
 		{
-			string url = $"Schedule/Student?week={week}&year={year}&tid={tid}";
+			string url = $"Schedule/Teacher?week={week}&year={year}&tid={tid}";
 			List<ScheduleDTO> schedules = await GetData<List<ScheduleDTO>>(url);
 			return schedules;
 		}

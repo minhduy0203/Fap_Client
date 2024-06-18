@@ -44,7 +44,8 @@ namespace AttendanceClient.Pages.User
               {
                   new Claim(ClaimTypes.Name, email),
                   new Claim(ClaimTypes.Role,role),
-                  new Claim("Id", id)
+                  new Claim("Id", id),
+                  new Claim("Token", result)
               };
 
 

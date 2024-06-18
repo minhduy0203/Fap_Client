@@ -1,6 +1,7 @@
 using AttendanceClient.Dto.Schedule;
 using AttendanceClient.Service;
 using AttendanceClient.Utils;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Globalization;
@@ -8,13 +9,16 @@ using System.Security.Claims;
 
 namespace AttendanceClient.Pages.Schedule
 {
+	[Authorize]
 	public class IndexModel : PageModel
 	{
+		[BindProperty]
 		public int week { get; set; }
+		[BindProperty]
 		public int year { get; set; } = DateTime.Now.Year;
 		public List<string> schedulesWeek { get; set; }
 		public List<int> scheduleYear { get; set; }
-		public List<ScheduleDTO> Schedules { get; set; }
+		public List<ScheduleDTO> Schedules { get; set; } = new List<ScheduleDTO>();
 
 		private ScheduleService ScheduleService;
 
@@ -23,21 +27,28 @@ namespace AttendanceClient.Pages.Schedule
 			ScheduleService = scheduleService;
 		}
 
-		public void OnGet()
+		public async Task OnGet()
 		{
 			DateTime dt = DateTime.Now;
 			Calendar cal = new CultureInfo("en-US").Calendar;
 			week = cal.GetWeekOfYear(dt, CalendarWeekRule.FirstDay, DayOfWeek.Monday);
-			GetData();
+			await GetData();
 		}
 
-		public void OnPost()
+		public async Task OnPost()
 		{
-			GetData();
+			await GetData();
 		}
 
 		public async Task GetData()
 		{
+
+			schedulesWeek = ScheduleLogic.GetAllWeeksInYear(DateTime.Now.Year);
+			scheduleYear = new List<int>();
+			for (int i = DateTime.Now.Year - 2; i <= DateTime.Now.Year + 1; i++)
+			{
+				scheduleYear.Add(i);
+			}
 
 			string role = User.Claims.First(claim => claim.Type == ClaimTypes.Role).Value;
 			string id = User.Claims.First(claim => claim.Type == "Id").Value;
@@ -49,12 +60,8 @@ namespace AttendanceClient.Pages.Schedule
 			{
 				Schedules = await ScheduleService.GetStudentSchedule(week, year, Int32.Parse(id));
 			}
-			schedulesWeek = ScheduleLogic.GetAllWeeksInYear(DateTime.Now.Year);
-			scheduleYear = new List<int>();
-			for (int i = DateTime.Now.Year - 2; i <= DateTime.Now.Year + 1; i++)
-			{
-				scheduleYear.Add(i);
-			}
+
+
 
 		}
 	}

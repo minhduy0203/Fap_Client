@@ -3,16 +3,28 @@
   "WorkspaceRootPath": "E:\\DEV\\Work\\AttendanceClient\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9C48AE2B-DE41-4870-BA51-C617FE4B1434}|AttendanceClient\\AttendanceClient.csproj|e:\\dev\\work\\attendanceclient\\attendanceclient\\pages\\schedule\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9C48AE2B-DE41-4870-BA51-C617FE4B1434}|AttendanceClient\\AttendanceClient.csproj|solutionrelative:attendanceclient\\pages\\schedule\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9C48AE2B-DE41-4870-BA51-C617FE4B1434}|AttendanceClient\\AttendanceClient.csproj|e:\\dev\\work\\attendanceclient\\attendanceclient\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9C48AE2B-DE41-4870-BA51-C617FE4B1434}|AttendanceClient\\AttendanceClient.csproj|solutionrelative:attendanceclient\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9C48AE2B-DE41-4870-BA51-C617FE4B1434}|AttendanceClient\\AttendanceClient.csproj|e:\\dev\\work\\attendanceclient\\attendanceclient\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9C48AE2B-DE41-4870-BA51-C617FE4B1434}|AttendanceClient\\AttendanceClient.csproj|solutionrelative:attendanceclient\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9C48AE2B-DE41-4870-BA51-C617FE4B1434}|AttendanceClient\\AttendanceClient.csproj|e:\\dev\\work\\attendanceclient\\attendanceclient\\pages\\schedule\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9C48AE2B-DE41-4870-BA51-C617FE4B1434}|AttendanceClient\\AttendanceClient.csproj|solutionrelative:attendanceclient\\pages\\schedule\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9C48AE2B-DE41-4870-BA51-C617FE4B1434}|AttendanceClient\\AttendanceClient.csproj|e:\\dev\\work\\attendanceclient\\attendanceclient\\pages\\user\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9C48AE2B-DE41-4870-BA51-C617FE4B1434}|AttendanceClient\\AttendanceClient.csproj|solutionrelative:attendanceclient\\pages\\user\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{9C48AE2B-DE41-4870-BA51-C617FE4B1434}|AttendanceClient\\AttendanceClient.csproj|e:\\dev\\work\\attendanceclient\\attendanceclient\\pages\\attendance\\report.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9C48AE2B-DE41-4870-BA51-C617FE4B1434}|AttendanceClient\\AttendanceClient.csproj|solutionrelative:attendanceclient\\pages\\attendance\\report.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C48AE2B-DE41-4870-BA51-C617FE4B1434}|AttendanceClient\\AttendanceClient.csproj|e:\\dev\\work\\attendanceclient\\attendanceclient\\pages\\attendance\\report.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C48AE2B-DE41-4870-BA51-C617FE4B1434}|AttendanceClient\\AttendanceClient.csproj|solutionrelative:attendanceclient\\pages\\attendance\\report.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C48AE2B-DE41-4870-BA51-C617FE4B1434}|AttendanceClient\\AttendanceClient.csproj|e:\\dev\\work\\attendanceclient\\attendanceclient\\dto\\studentschedules\\studentschedulesdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C48AE2B-DE41-4870-BA51-C617FE4B1434}|AttendanceClient\\AttendanceClient.csproj|solutionrelative:attendanceclient\\dto\\studentschedules\\studentschedulesdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C48AE2B-DE41-4870-BA51-C617FE4B1434}|AttendanceClient\\AttendanceClient.csproj|e:\\dev\\work\\attendanceclient\\attendanceclient\\service\\studentcourseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C48AE2B-DE41-4870-BA51-C617FE4B1434}|AttendanceClient\\AttendanceClient.csproj|solutionrelative:attendanceclient\\service\\studentcourseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,45 +34,84 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "E:\\DEV\\Work\\AttendanceClient\\AttendanceClient\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "AttendanceClient\\Pages\\Shared\\_Layout.cshtml",
+              "ToolTip": "E:\\DEV\\Work\\AttendanceClient\\AttendanceClient\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "AttendanceClient\\Pages\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAACEAAAAAAAAAAAAiwCoAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-18T03:46:09.19Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "E:\\DEV\\Work\\AttendanceClient\\AttendanceClient\\Program.cs",
-              "RelativeDocumentMoniker": "AttendanceClient\\Program.cs",
-              "ToolTip": "E:\\DEV\\Work\\AttendanceClient\\AttendanceClient\\Program.cs",
-              "RelativeToolTip": "AttendanceClient\\Program.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA4AAAA5AAAA",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "E:\\DEV\\Work\\AttendanceClient\\AttendanceClient\\Pages\\Schedule\\Index.cshtml",
+              "RelativeDocumentMoniker": "AttendanceClient\\Pages\\Schedule\\Index.cshtml",
+              "ToolTip": "E:\\DEV\\Work\\AttendanceClient\\AttendanceClient\\Pages\\Schedule\\Index.cshtml",
+              "RelativeToolTip": "AttendanceClient\\Pages\\Schedule\\Index.cshtml",
+              "ViewState": "AQIAAEIAAAAAAAAAAAAAAFEAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-18T03:42:03.291Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "StudentSchedulesDTO.cs",
+              "DocumentMoniker": "E:\\DEV\\Work\\AttendanceClient\\AttendanceClient\\Dto\\StudentSchedules\\StudentSchedulesDTO.cs",
+              "RelativeDocumentMoniker": "AttendanceClient\\Dto\\StudentSchedules\\StudentSchedulesDTO.cs",
+              "ToolTip": "E:\\DEV\\Work\\AttendanceClient\\AttendanceClient\\Dto\\StudentSchedules\\StudentSchedulesDTO.cs",
+              "RelativeToolTip": "AttendanceClient\\Dto\\StudentSchedules\\StudentSchedulesDTO.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAQwA0AAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-16T16:49:14.676Z",
+              "WhenOpened": "2024-06-18T03:14:13.629Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "StudentCourseService.cs",
+              "DocumentMoniker": "E:\\DEV\\Work\\AttendanceClient\\AttendanceClient\\Service\\StudentCourseService.cs",
+              "RelativeDocumentMoniker": "AttendanceClient\\Service\\StudentCourseService.cs",
+              "ToolTip": "E:\\DEV\\Work\\AttendanceClient\\AttendanceClient\\Service\\StudentCourseService.cs",
+              "RelativeToolTip": "AttendanceClient\\Service\\StudentCourseService.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAgwBAAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-18T02:33:57.831Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Report.cshtml.cs",
+              "DocumentMoniker": "E:\\DEV\\Work\\AttendanceClient\\AttendanceClient\\Pages\\Attendance\\Report.cshtml.cs",
+              "RelativeDocumentMoniker": "AttendanceClient\\Pages\\Attendance\\Report.cshtml.cs",
+              "ToolTip": "E:\\DEV\\Work\\AttendanceClient\\AttendanceClient\\Pages\\Attendance\\Report.cshtml.cs",
+              "RelativeToolTip": "AttendanceClient\\Pages\\Attendance\\Report.cshtml.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAAjwCAAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-17T16:10:16.561Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "E:\\DEV\\Work\\AttendanceClient\\AttendanceClient\\Pages\\User\\Login.cshtml",
-              "RelativeDocumentMoniker": "AttendanceClient\\Pages\\User\\Login.cshtml",
-              "ToolTip": "E:\\DEV\\Work\\AttendanceClient\\AttendanceClient\\Pages\\User\\Login.cshtml",
-              "RelativeToolTip": "AttendanceClient\\Pages\\User\\Login.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Title": "Report.cshtml",
+              "DocumentMoniker": "E:\\DEV\\Work\\AttendanceClient\\AttendanceClient\\Pages\\Attendance\\Report.cshtml",
+              "RelativeDocumentMoniker": "AttendanceClient\\Pages\\Attendance\\Report.cshtml",
+              "ToolTip": "E:\\DEV\\Work\\AttendanceClient\\AttendanceClient\\Pages\\Attendance\\Report.cshtml",
+              "RelativeToolTip": "AttendanceClient\\Pages\\Attendance\\Report.cshtml",
+              "ViewState": "AQIAAB0AAAAAAAAAAAASwFsAAAALAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-16T16:39:39.426Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Index.cshtml.cs",
-              "DocumentMoniker": "E:\\DEV\\Work\\AttendanceClient\\AttendanceClient\\Pages\\Schedule\\Index.cshtml.cs",
-              "RelativeDocumentMoniker": "AttendanceClient\\Pages\\Schedule\\Index.cshtml.cs",
-              "ToolTip": "E:\\DEV\\Work\\AttendanceClient\\AttendanceClient\\Pages\\Schedule\\Index.cshtml.cs",
-              "RelativeToolTip": "AttendanceClient\\Pages\\Schedule\\Index.cshtml.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAAAAA8AAAAtAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-16T15:56:33.968Z",
+              "WhenOpened": "2024-06-17T16:10:14.326Z",
               "EditorCaption": ""
             }
           ]

@@ -1,0 +1,60 @@
+﻿@page
+@using AttendanceClient.Dto.StudentSchedules
+@model AttendanceClient.Pages.Attendance.IndexModel
+@{
+}
+<form method="post">
+
+
+
+	<div class="relative overflow-x-auto">
+		<table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+			<thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+				<tr>
+					<th scope="col" class="px-6 py-3">
+						Id
+					</th>
+					<th scope="col" class="px-6 py-3">
+						Name
+					</th>
+					<th scope="col" class="px-6 py-3">
+						Code
+					</th>
+					<th scope="col" class="px-6 py-3">
+						Status
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+
+				@if (Model.Schedule?.StudentSchedules != null)
+				{
+					@for (int i = 0; i < Model.Schedule.StudentSchedules.Count; i++)
+					{
+						StudentSchedulesDTO studentSchedules = Model.Schedule.StudentSchedules.ElementAt(i);
+
+						<tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+							<th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+								@studentSchedules.Student.Id
+							</th>
+							<td class="px-6 py-4">
+								@studentSchedules.Student.Name
+							</td>
+							<td class="px-6 py-4">
+								@studentSchedules.Student.Code
+							</td>
+							<td class="px-6 py-4">
+
+								Absent <input asp-for="Statuses[i]" value="1" type="radio" name="Statuses[@i]">
+								Attend<input asp-for="Statuses[i]" value="2" type="radio" >
+								<input type="hidden" value="@studentSchedules.StudentId" name="sid[@i]" />
+							</td>
+						</tr>
+					}
+				}
+
+			</tbody>
+		</table>
+	</div>
+	<button type="submit">Submit</button>
+</form>

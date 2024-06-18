@@ -14,8 +14,11 @@ namespace AttendanceClient
             builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie();
             builder.Services.AddTransient<UserService>();
             builder.Services.AddTransient<ScheduleService>();
+            builder.Services.AddTransient<AttendanceService>();
+			builder.Services.AddTransient<StudentCourseService>();
 
-            var app = builder.Build();
+
+			var app = builder.Build();
 
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())
