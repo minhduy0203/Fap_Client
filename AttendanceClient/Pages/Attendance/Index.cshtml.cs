@@ -12,15 +12,17 @@ namespace AttendanceClient.Pages.Attendance
 		[BindProperty(SupportsGet = true)]
 		public int ScheduleId { get; set; }
 
-        public ScheduleDTO Schedule { get; set; }
-
-        [BindProperty]
-        public int[] Statuses { get; set; }
+		public ScheduleDTO Schedule { get; set; }
 
 		[BindProperty]
-        public int[] sid { get; set; }
+		public int[] Statuses { get; set; }
 
-        public AttendanceService attendanceService { get; set; }
+		[BindProperty]
+		public int[] sid { get; set; }
+
+		public string Message { get; set; }
+
+		public AttendanceService attendanceService { get; set; }
 
 		public IndexModel(AttendanceService attendanceService)
 		{
@@ -36,11 +38,12 @@ namespace AttendanceClient.Pages.Attendance
 		{
 			StudentScheduleListDto request = new StudentScheduleListDto
 			{
-				Statuses = this.Statuses.Select(ss => (Status) ss).ToList(),
+				Statuses = this.Statuses.Select(ss => (Status)ss).ToList(),
 				StudentId = this.sid.ToList(),
 				ScheduleId = this.ScheduleId
 			};
 			attendanceService.AttendListStudent(request);
+			Message = "Add attendance successfully";
 			await GetData();
 		}
 

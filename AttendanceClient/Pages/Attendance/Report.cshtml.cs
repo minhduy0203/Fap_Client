@@ -1,4 +1,5 @@
 using AttendanceClient.Dto.StudentCourse;
+using AttendanceClient.Dto.StudentSchedules;
 using AttendanceClient.Service;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -9,7 +10,7 @@ namespace AttendanceClient.Pages.Attendance
 	{
 		private StudentCourseService studentCourseService;
 		public List<StudentCourseDTO> StudentCourses { get; set; }
-		public StudentCourseDTO StudentCourseDTO { get; set; }
+		public List<AttendanceDto> AttendanceDto { get; set; }
 		public string Message { get; set; }
 		[BindProperty(SupportsGet =true)]
 		public int CourseId { get; set; }
@@ -31,7 +32,7 @@ namespace AttendanceClient.Pages.Attendance
 				int id = Int32.Parse(User.Claims.First(claim => claim.Type == "Id").Value);
 				StudentCourses = await studentCourseService.ListStudentCourse(id);
 				if (CourseId != 0)
-					StudentCourseDTO = await studentCourseService.GetStudentCourse(id, CourseId);
+					AttendanceDto = await studentCourseService.GetStudentCourse(id, CourseId);
 			}
 			catch (Exception ex)
 			{

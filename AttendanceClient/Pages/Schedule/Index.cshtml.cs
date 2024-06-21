@@ -9,7 +9,7 @@ using System.Security.Claims;
 
 namespace AttendanceClient.Pages.Schedule
 {
-	[Authorize]
+	[Authorize(Roles ="STUDENT,TEACHER")]
 	public class IndexModel : PageModel
 	{
 		[BindProperty]

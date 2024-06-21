@@ -1,4 +1,6 @@
 ﻿using AttendanceClient.Dto.StudentCourse;
+using AttendanceClient.Dto.StudentSchedules;
+using AttendanceMananagmentProject.Dto.StudentSchedules;
 
 namespace AttendanceClient.Service
 {
@@ -11,10 +13,10 @@ namespace AttendanceClient.Service
 			return result;
 		}
 
-		public async Task<StudentCourseDTO> GetStudentCourse(int sid, int cid)
+		public async Task<List<AttendanceDto>> GetStudentCourse(int sid, int cid)
 		{
-			string url = $"StudentCourse?sid={sid}&cid={cid}";
-			StudentCourseDTO result = await GetData<StudentCourseDTO>(url);
+			string url = $"StudentSchedule/List/Student?sid={sid}&cid={cid}";
+			List<AttendanceDto> result = await GetData<List<AttendanceDto>>(url);
 			return result;
 		}
 	}

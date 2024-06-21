@@ -1,0 +1,11 @@
+﻿@page
+@model AttendanceClient.Pages.Schedule.ImportModel
+@{
+}
+<h1>Import Page</h1>
+
+<form method="post" enctype="multipart/form-data">
+	<input type="file" name="Upload" />
+	<input type="submit" value="Upload" />
+</form>
+<h1>@Model?.result</h1>

@@ -11,7 +11,10 @@ namespace AttendanceClient
 
             // Add services to the container.
             builder.Services.AddRazorPages();
-            builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie();
+            builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(opt =>
+            {
+                opt.AccessDeniedPath = "/User/Denied";
+            });
             builder.Services.AddTransient<UserService>();
             builder.Services.AddTransient<ScheduleService>();
             builder.Services.AddTransient<AttendanceService>();
